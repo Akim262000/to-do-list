@@ -4,6 +4,8 @@ const buttonNode = document.querySelector(".js-button");
 
 let todos = [];
 
+let todosLocal = '';
+
 function addTodo(text) {
   const todo = {
     text,
@@ -11,8 +13,13 @@ function addTodo(text) {
     id: `${Math.random()}`,
   };
 
+  todosLocal = localStorage.setItem('todosLocal', JSON.stringify(todo));
   todos.push(todo);
 }
+
+let result = localStorage.getItem('todosLocal');
+let newResult = JSON.parse(result);
+
 
 function deleteTodo(id) {
   todos.forEach((todo) => {
@@ -56,7 +63,8 @@ todosNode.addEventListener("click", (e) => {
 
   deleteTodo(id);
 
-  render();
+  render(JSON.parse.result);
 });
-
+// localStorage.clear();
+addTodo(newResult.text);
 render();

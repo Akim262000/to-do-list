@@ -1,0 +1,85 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  background-image: url(/image/list.jpg);
+}
+
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.todo-title {
+  font-weight: 800;
+  margin-top: 24px;
+}
+
+.js-button {
+  background-image: url(./image/plus32.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  width: 32px;
+  height: 32px;
+}
+
+.add-todo {
+  margin-bottom: 14px;
+}
+
+.js-todos {
+  display: flex;
+  flex-direction: column;
+  font-size: 50px;
+}
+
+.js-input {
+  width: 500px;
+  height: 40px;
+  border: none;
+  font-size: 20px;
+}
+
+.todo-delete {
+  background-image: url(./image/trash.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+}
+
+.list {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
